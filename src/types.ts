@@ -8,17 +8,17 @@ export type ILayoutDataDTO = {
 
 export type IGameSquare = Readonly<{ status?: 'miss' | 'hit'; shipIdx?: number }>
 type X = IGameSquare
-type Y = Readonly<[X, X, X, X, X, X, X, X, X, X]>
-export type IGameBoard = Readonly<[Y, Y, Y, Y, Y, Y, Y, Y, Y, Y]>
+type Y = [X, X, X, X, X, X, X, X, X, X]
+export type IGameBoard = [Y, Y, Y, Y, Y, Y, Y, Y, Y, Y]
 
-export type IShipPart = Readonly<{ crd: ICoordinates, damaged: boolean }>
+export type IShipPart = Readonly<{ crd: ICoordinates, damaged: boolean, shipIdx: number }>
 
 export type IShip = Readonly<{
   type: IShipType
   parts: IShipPart[]
 }>
 
-export type PlayerState = Readonly<{
+export type IPlayerState = Readonly<{
   ships: IShip[]
   score: number 
   gameBoard: IGameBoard
