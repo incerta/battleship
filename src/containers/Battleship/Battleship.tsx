@@ -20,6 +20,10 @@ export default function () {
     setState(updatedState)
   }
 
+  if (state.isWin) {
+    return <div>You won!</div>
+  }
+
   return (
     <div className="Battleship">
       <div>

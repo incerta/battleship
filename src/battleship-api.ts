@@ -78,8 +78,8 @@ const applyShipDamage = (
   )
 }
 
-export const checkWinGameCondition = (enemyShips: IShip[], score: number) => {
-  const requiredWinScore = enemyShips.map((s) => s.parts).length
+export const checkWinGameCondition = (ships: IShip[], score: number) => {
+  const requiredWinScore = ships.map((s) => s.parts).flat().length
   return score >= requiredWinScore
 }
 
