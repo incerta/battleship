@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
-import Battleship from './components/Battleship'
+import Battleship from './containers/Battleship/Battleship'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,0 +1,16 @@
+.GameBoard {
+  border-bottom: 1px solid #555;
+  border-right: 1px solid #555;
+  width: 400px;
+}
+
+.GameBoard .GameBoard__row {
+  display: flex;
+  border-top: 1px solid #555;
+}
+
+.GameBoard .GameBoard__square {
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid #555;
+}
