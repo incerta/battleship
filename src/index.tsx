@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import * as serviceWorker from './serviceWorker';
+import Battleship from './components/Battleship'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Battleship />
   </React.StrictMode>,
   document.getElementById('root')
 );
