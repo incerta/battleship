@@ -2,7 +2,7 @@ export type IShipType = 'aircraft' | 'battleship' | 'carrier' | 'cruiser' | 'sub
 export type ICoordinates = Readonly<[number, number]>
 
 export type ILayoutDataDTO = {
-  shipTypes: {[k in IShipType]: { size: number, count: number }}
+  shipTypes: {[k in IShipType]?: { size: number, count: number }}
   layout: Array<{ ship: IShipType, positions: ICoordinates[] }>
 }
 
