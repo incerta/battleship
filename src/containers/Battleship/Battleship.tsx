@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import * as api from '../../battleship-api'
 import layoutData from '../../fixtures/layout-data'
+
 import GameBoard from '../../components/GameBoard/GameBoard'
+import ScoreArea from '../../components/ScoreArea/ScoreArea'
+
 import './Battleship.styles.css'
 
 import { ICoordinates } from '../../types'
@@ -18,6 +21,7 @@ export default function () {
 
   return (
     <div className="Battleship">
+      <ScoreArea score={state.score} />
       <GameBoard gameBoard={state.gameBoard} hitAttempt={hitAttempt} />
     </div>
   )

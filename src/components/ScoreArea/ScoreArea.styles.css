@@ -1,0 +1,9 @@
+.ScoreArea {
+  display: flex;
+  text-align: center;
+  padding: 12px;
+}
+
+.ScoreArea .ScoreArea__player {
+  padding: 12px;
+}
