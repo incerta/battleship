@@ -1,0 +1,7 @@
+.Ship {
+  margin-top: 12px;
+}
+
+.DamageIndicator {
+  display: flex;
+}

@@ -88,10 +88,10 @@ export const hitAttempt = (state: IPlayerState, c: ICoordinates): IPlayerState =
   const gameBoard = applyGameBoardSquareStatus(
     state.gameBoard,
     c,
-    shipIdx ? 'hit' : 'miss'
+    typeof shipIdx === 'number' ? 'hit' : 'miss'
   )
 
-  if (!shipIdx) {
+  if (typeof shipIdx !== 'number') {
     return { ...state, gameBoard }
   }
 

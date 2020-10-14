@@ -4,6 +4,7 @@ import layoutData from '../../fixtures/layout-data'
 
 import GameBoard from '../../components/GameBoard/GameBoard'
 import ScoreArea from '../../components/ScoreArea/ScoreArea'
+import ShipInfoArea from '../../components/ShipInfoArea/ShipInfoArea'
 
 import './Battleship.styles.css'
 
@@ -21,7 +22,11 @@ export default function () {
 
   return (
     <div className="Battleship">
-      <ScoreArea score={state.score} />
+      <div>
+        <ScoreArea score={state.score} />
+        <ShipInfoArea ships={state.ships} />
+      </div>
+      
       <GameBoard gameBoard={state.gameBoard} hitAttempt={hitAttempt} />
     </div>
   )
